@@ -11,9 +11,9 @@
     $('#site-navigation .sub-menu, #site-navigation .children').before('<i class="fa fa-caret-right"></i>');
 
     if(!!('ontouchstart' in window)){
-      $('#site-navigation .menu-item-has-children .fa, #site-navigation .page_item_has_children .fa')
+      $('#site-navigation .menu-item-has-children, #site-navigation .page_item_has_children')
       .click(function() {
-        $(this).toggleClass('open').next('ul').slideToggle(300);
+        $(this).children('.fa').toggleClass('open').next('ul').slideToggle(300);
       });
     } else {
       $('#site-navigation .menu-item-has-children, #site-navigation .page_item_has_children')
